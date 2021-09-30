@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Collections View Controller-->
+        <scene sceneID="BQi-fE-BYQ">
+            <objects>
+                <viewController storyboardIdentifier="CollectionsViewController" id="X9n-it-Gxv" customClass="CollectionsViewController" customModule="PinterestClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ivK-X1-K4A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fJH-UK-G5h">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yco-Tc-DKL">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCollectionViewCell" id="zIu-SV-iLE" customClass="ImageCollectionViewCell" customModule="PinterestClone" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="171" height="223"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SOl-5q-HHg">
+                                            <rect key="frame" x="0.0" y="0.0" width="171" height="223"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xbS-ON-UHA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="171" height="223"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="xbS-ON-UHA" secondAttribute="bottom" id="BB2-b6-Ela"/>
+                                                <constraint firstItem="xbS-ON-UHA" firstAttribute="leading" secondItem="SOl-5q-HHg" secondAttribute="leading" id="KX1-1t-zQt"/>
+                                                <constraint firstItem="xbS-ON-UHA" firstAttribute="top" secondItem="SOl-5q-HHg" secondAttribute="top" id="mpP-9c-6Bk"/>
+                                                <constraint firstAttribute="trailing" secondItem="xbS-ON-UHA" secondAttribute="trailing" id="yNa-9Q-mkc"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="171" height="223"/>
+                                        <connections>
+                                            <outlet property="collectionImage" destination="xbS-ON-UHA" id="FNf-9X-8gk"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8C7-ge-bmB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8C7-ge-bmB" firstAttribute="bottom" secondItem="fJH-UK-G5h" secondAttribute="bottom" id="4UF-9y-mHw"/>
+                            <constraint firstItem="8C7-ge-bmB" firstAttribute="trailing" secondItem="fJH-UK-G5h" secondAttribute="trailing" id="7Z5-nI-d3G"/>
+                            <constraint firstItem="fJH-UK-G5h" firstAttribute="top" secondItem="8C7-ge-bmB" secondAttribute="top" id="QeO-9Z-INh"/>
+                            <constraint firstItem="fJH-UK-G5h" firstAttribute="leading" secondItem="8C7-ge-bmB" secondAttribute="leading" id="fmr-aU-c3g"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imagesCollectionView" destination="fJH-UK-G5h" id="EvF-tO-5XV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sou-1F-eDd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-59.420289855072468" y="75.669642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
